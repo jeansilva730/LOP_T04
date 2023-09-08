@@ -3,6 +3,7 @@ function setup() {
 }
 
 function draw() {
+  rectMode(CENTER);
   background(220);
   fill('blue');
   rect(200, 200, 30, 30);
