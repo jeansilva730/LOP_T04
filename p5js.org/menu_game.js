@@ -1,14 +1,18 @@
+// Tamanho da Tela (w = Largura, H = Altura)
 const CANVAS_W = 600;
 const CANVAS_H = 400;
+// Centro da tela
 const SCREEN_CENTER_W = CANVAS_W / 2; // Largura/Centro tela
 const SCREEN_CENTER_H = CANVAS_H / 2; // Altura/Centro tela
 var screen_is = "MENU";
+// Cores iniciais dos botões
 var btn_start_color = "grey";
 var btn_start_text = "white";
 var btn_options_color = "grey";
 var btn_options_text = "white";
 var btn_credits_color = "grey";
 var btn_credits_text = "white";
+// Variável de controle para o mouse
 var value = 0;
 
 
@@ -22,6 +26,8 @@ function menu() {
   const MENU_START = "Iniciar";
   const MENU_OPTIONS = "Opções";
   const MENU_CREDITS = "Créditos";
+  // Definição do tamanho dos botões proporcional
+  // ao tamanho da tela
   var BTN_W = CANVAS_W * 0.25; // Largura do botão
   var BTN_H = CANVAS_H * 0.10; // Altura do botão
   rectMode(CENTER);
@@ -58,7 +64,8 @@ function debugMouse(){
   fill('white');
   if (value === 1){ fill('orange');}
   ellipse(mouseX, mouseY, 10, 10);
-};
+}
+
 function setup() {
   createCanvas(CANVAS_W, CANVAS_H);
   noCursor();
@@ -72,7 +79,7 @@ function draw() {
 
 function mouseMoved(){
   // debug mouse
-  if (mouseX > 100){
+  if (mouseX > 200){
     value = 1;
   }
   // prevent default
