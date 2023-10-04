@@ -71,7 +71,12 @@ function menu() {
 }
 
 function levels(){
-  
+  for (let y = 80; y <= 320; y += 80){
+    for (let x = 80; x <= 320; x += 80){
+      fill('orange');
+      rect(x, y, 50);
+    }
+  }
 }
 
 function debugMouse(){
@@ -126,6 +131,6 @@ function setup() {
 
 function draw() {
   background(220);
-  debugMouse();
   changeScreen();
+  debugMouse();
 }
